@@ -1,0 +1,12 @@
+services:
+  telegram_instagram_bot:
+    build: .
+    container_name: telegram-instagram-bot
+    restart: always
+    env_file: .env
+    volumes:
+      - ./downloads:/app/downloads
+      - ./session.json:/app/session.json
+    # optional: you can see logs in real time
+    tty: true
+    stdin_open: true
