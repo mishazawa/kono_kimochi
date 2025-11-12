@@ -81,7 +81,7 @@ def upload_to_instagram(paths, caption):
             cl.album_upload(paths, caption=caption)
             print(f"✅ Uploaded album with {len(paths)} images.")
         else:
-            cl.photo_upload(paths[0], caption=caption, alt_text=caption)
+            cl.photo_upload(paths[0], caption=caption)
             print("✅ Uploaded single photo.")
     except Exception as e:
         print(f"❌ Instagram upload failed: {e}")
